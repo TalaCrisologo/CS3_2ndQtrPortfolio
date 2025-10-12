@@ -13,6 +13,11 @@
             background-color: #bed2ba;
             color: #1f311b;
             text-align: center;
+            margin: 0;
+
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         header {
@@ -23,51 +28,116 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin: 0; 
         }
 
         #emma {
             width: 125px;
             height: 125px;
         }
-
-        p {
-            font-family: "Jua", sans-serif;
-            font-weight: 400;
-            font-style: normal;
-            text-align: left;
-            margin: 1px 0 0 0;
+        #cmiygl {
+            width: 300px;
+            height: 200px;
+            padding-left:0;
         }
-
-        section {
-            text-align: left;
-            background-color: #6a7a5a;
-            width: 250px;
-            margin: 10px 0 0 2em; 
-            padding-bottom: 1em;
-            border-radius: 10px; 
+        #tyler {
+            width: 150px;
+            height: 150px;
+            padding-left:0;
+            padding-top: 10;
         }
-        .centered {
-            background-color: #6a7a5a;
-            width: 250px;
-            margin: 20px auto; /* 👈 centers it horizontally */
-            padding-bottom: 1em;
-            border-radius: 10px;
-            text-align: left;
-}
-        h1 {
-            font-family: "Libre Baskerville", serif;
-            font-weight: 700;
-            font-style: normal;
-            margin: 0;
-        }
-
-        h2 {
-            font-family: "Jua", sans-serif;
+        #am{
+            font-family: "Libre Baskerville", serif;           
             font-weight: 400;
             font-size: 15px;
             padding: 3%;
             margin: 0;
+            color: #6a7a5a;
+        }
+        #mfavs{
+            font-family: "Jua", sans-serif;           
+            font-weight: 400;
+            font-size: 15px;
+            padding: 1%;
+            margin: 0;
+            color: #dad19b;
+            text-align: center;
+        }
+        p {
+            font-family: "Jua", sans-serif;
+            font-weight: 400;
+            text-align: left;
+            margin: 1px 0 0 0;
+        }
+
+        .stuff {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px; 
+            margin: 30px 3em; 
+        }
+
+        .submissions {
+            background-color: #6a7a5a;
+            width: 250px;
+            padding-bottom: 1em;
+            border-radius: 10px;
+            text-align: left;
+        }
+
+        .abtme {
+            background-color: #dad19b;
+            flex: 1; 
+            padding-bottom: 1em;
+            border-radius: 10px;
+            text-align: left;
+        }
+
+        .media {
+            background-color: #6a7a5a;
+            width: 250px;
+            padding-bottom: 1em;
+            border-radius: 10px;
+            text-align: left;
+        }
+        .media audio {
+            width: 90%;   
+            margin: 10px auto;
+            display: block;
+        }
+
+        .about {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 0 3%;
+        }
+
+        .about p {
+            text-align: left;
+            font-family: "Jua", sans-serif;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+            }
+        h1 {
+            font-family: "Libre Baskerville", serif;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        h2 {
+            font-family: "Libre Baskerville", serif;           
+            font-weight: 400;
+            font-size: 15px;
+            padding: 3%;
+            margin: 0;
+            color: #dad19b;
         }
 
         ul {
@@ -91,6 +161,14 @@
             color: #6a7a5a;
             transition: 0.2s ease;
         }
+        footer {
+            text-align: center;
+            padding: 1em;
+            background-color: #8daf9b;
+            color: #1f311b;
+            margin-top: auto;
+        }
+
     </style>
 </head>
 
@@ -103,19 +181,47 @@
         <img id="emma" src="/assets/emma.png" alt="Emma from Veil">
     </header>
     
-    <section>
-        <h2>links to submissions >></h2>
-        <ul>
-            <li><a href="./public/2Q1G/2Q1GPotassiumCrisologo.html">2Q1G Exercise</a></li>
-        </ul>
-    </section>
+    <div class="stuff">
+        <section class="submissions">
+            <h2>links to submissions ᯓ★</h2>
+            <ul>
+                <li><a href="./public/2Q1GPotassiumCrisologo.html">2Q1G Exercise</a></li>
+            </ul>
+        </section>
 
-    <section class="abtme">
-    <h2>other submissions >></h2>
-    <ul>
-        <li><a href="./public/2Q1GPotassiumCrisologo.html">2Q1G Exercise</a></li>
-    </ul>
+        <section class="abtme">
+    <h2 id="am">about me .ᐟ</h2>
+
+    <div class="about">
+        <img id="cmiygl" src="/assets/cmiygl.png" alt="me">
+        <p id="p1">
+            Hello! I'm Tala and this is my portfolio for different classworks in CS3 Q2. 
+            I decided to lock into my portfolio design because I kept forgetting to make my previous one pretty.
+            I love music (usually rap/pop/opm/musicals), sports (mainly frisbee) & hiking, chem, and the color blue (I don't know why my portfolio color scheme is green). 
+            I also like games like Minecraft, Pokemon, and Hades. 
+        </p>
+    </div>
 </section>
 
+
+        <section class="media">
+            <h2> ‎ </h2>
+            <p id="fav"> </p>
+            <img id="tyler" src="/assets/tyler.png" alt="Call Me If You Get Lost Cover" class="center">
+            <audio controls>
+                <source src="assets/ttc_sweet.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <p id="mfavs"> "sweet" - tyler, the creator</p>
+        </section>
+    </div>
+
+<footer>
+    <p>&copy; 2025 TalaCrisologo</p>
+    <ul>
+        <li><a href="./References.html">References</a></li>
+    </ul>
+
+</footer>
 </body>
 </html>
