@@ -1,74 +1,185 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Pokemon Starters</title>
+    <title>Anime Tracker !</title>
 </head>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <meta charset="UTF-8">
+
 <style>
 
 header { 
-  font-family: Pixelify Sans;
+    font-family: Libre Baskerville;
+    font-weight:400;
+    background-image: url('sky.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: left;
+    padding: 2em;
+    display: flex;
+    align-items: center;
+    height: 225px;
 }
-h1{
+
+body {
+    background-color: #dbcac3;
+    color: #e5dea0;
     text-align: center;
-    margin-top: 100px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
-ul {
+
+/* headings */
+h1{
+    color: #dbcac3;
+    font-weight: 700;
+    font-family: Libre Baskerville;
+    font-weight:400;
+    text-align: left;
+    margin-top: 50px;
+}
+
+h2{
+    color: #515c7e;
+    font-family: Libre Baskerville;
+    font-weight:400;
+    font-size: 18px;
+    text-align: left;
+    padding: 3%;
+}
+
+/* first container */
+.stuff {
+    display: flex;
+    align-items: center;
+    gap: 300px;
+    margin: 40px 3em;
+}
+
+.intro {
+    background-color: #f5f0ea;
+    width: 60%; 
+    border-radius: 10px;
+    text-align: left;
+    padding-bottom: 1em;
+}
+
+.intro h2 {
+    color: #515c7e;
+    font-family: Libre Baskerville;
+    font-weight: 400;
+    font-size: 25px;
+    margin-bottom: 0.3em;
+}
+
+.intro p {
+    font-size: larger;
+    font-family: "EB garamond";
+    padding: 3%;
+    color: #515c7e;
+    margin-top: 0;
+}
+
+.wartortle {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 200px;
+    margin-top: 20px;
+}
+
+.wartortle img {
+    width: 200px;
+    height: auto;
+}
+
+/* navbar stuff */
+ul.navbar {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    background-color: #3b4cca;
+    background-color: #515c7e;
     display: flex;
     position: fixed;
     top: 0;
     width: 100%;
     height: 50px;
     left: 0;
-    }
+}
 
-a {
+ul.navbar a {
+    font-family: "EB garamond";
+    font-size: 18px;
     display: block;
-    color: white;
-    padding: 20px 20px;
+    color: #dbcac3;
+    padding: 15px 20px;
     text-decoration: none;
     font-size: 20;
-    }
+}
 
-a:hover {
-    background-color: #5b6df9;
-    padding: 20px 15px;
-    }
+ul.navbar a:hover {
+    background-color: #dbcac3;
+    color: #515c7e;
+    padding: 15px 15px;
+}
 
-.gengar {
-            position: fixed;
-            right: 100px;   
-            top: 200px;    
-        }
+/* stuff inside footer */
+ul.ref {
+    list-style-type: none;
+    font-size: 10px;
+}
 
-    .gengar img {
-        width: 300px;  
-        height: auto;  
-    }
+#copyr{
+    font-size: 12px;
+    padding: 0%;
+}
+
+footer {
+    font-family: "Libre Baskerville", serif;
+    text-align: center;
+    padding: 1em;
+    background-color: #515c7e;
+    color: #dbcac3;
+    margin-top: auto; 
+}
+
 </style>
 
 <body>
     <header> 
-        <ul>
-            <li><a href="https://roycan-digitalgarden.vercel.app/part-1-html-structure-sprint/">Kanto</a></li>
-            <li><a href="https://roycan-digitalgarden.vercel.app/part-2-css-pimp-my-button/">Johto</a></li>
-            <li><a href="https://roycan-digitalgarden.vercel.app/part-3-emoji-trading-card/">Hoenn</a></li>
-            <li><a href="https://roycan-digitalgarden.vercel.app/part-4-flexbox-profile-grid/">Kalos</a></li>
+        <ul class="navbar">
+            <li><a href="https://roycan-digitalgarden.vercel.app/part-1-html-structure-sprint/">romance</a></li>
+            <li><a href="https://roycan-digitalgarden.vercel.app/part-2-css-pimp-my-button/">shounen</a></li>
+            <li><a href="https://roycan-digitalgarden.vercel.app/part-4-flexbox-profile-grid/">movies</a></li>
         </ul>
 
-        <h1>Pokemon Starters Stats Page!</h1>
+        <h1> ★'s anime tracker .ᐟ</h1>
     </header>
 
-    <div class="gengar">
-        <img src="gengar.gif" alt="Gengar">
+<div class="stuff">
+    <section class="intro">
+        <h2>intro ᯓ★</h2>
+        <p>Hello! Welcome to my anime movies/series tracker. 
+        I'll be writing down my favorite anime for the genres: romance, shounen, and anime movies in general! 
+        I'll also be including my ratings, reviews, and favorite things about each anime.
+        <br>This is Wartortle. Wartortle also likes anime. He also matches the color scheme. →</p>
+    </section>
 
+    <div class="wartortle">
+        <img src="wartortle.gif" alt="Wartortle">
     </div>
+</div>
+
+<footer>
+    <p id="copyr">   &copy; 2025 Tala Crisologo </p>
+    <ul class="ref">
+        <li><a href="./public/References.html">references</a></li>
+    </ul>
+</footer>
+
 </body>
 </html>
