@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Anime Tracker !</title>
+    <title>Romance Tracker !</title>
 </head>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +14,7 @@
 header { 
     font-family: Libre Baskerville;
     font-weight:400;
-    background-image: url('./2Q1Gimg/sky.png');
+    background-image: url('rom.png');
     background-repeat: no-repeat;
     background-size: cover;
     text-align: left;
@@ -36,7 +36,8 @@ body {
 
 /* headings */
 h1{
-    color: #dbcac3;
+    color: #b93555;
+    text-shadow: 2px 2px #ecd8dd;
     font-weight: 700;
     font-family: Libre Baskerville;
     font-weight:400;
@@ -54,6 +55,26 @@ h2{
 }
 
 /* first container */
+table {
+    font-family: "EB garamond";
+    color:#8a2942;
+    border-collapse: collapse;
+    width: auto;
+    table-layout: auto;
+}
+
+td{
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 4px;
+}
+
+th {
+    font-family: "Libre Baskerville";
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 4px;
+}
 .stuff {
     display: flex;
     align-items: center;
@@ -63,7 +84,7 @@ h2{
 
 .intro {
     background-color: #f5f0ea;
-    width: 60%; 
+    width: auto; 
     border-radius: 10px;
     text-align: left;
     padding-bottom: 1em;
@@ -77,22 +98,14 @@ h2{
     margin-bottom: 0.3em;
 }
 
-.intro p {
-    font-size: larger;
-    font-family: "EB garamond";
-    padding: 3%;
-    color: #515c7e;
-    margin-top: 0;
-}
-
-.wartortle {
+.milotic {
     display: flex;
     justify-content: flex-end;
     margin-right: 200px;
     margin-top: 20px;
 }
 
-.wartortle img {
+.milotic img {
     width: 200px;
     height: auto;
 }
@@ -102,7 +115,7 @@ ul.navbar {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    background-color: #515c7e;
+    background-color: #db97a5;
     display: flex;
     position: fixed;
     top: 0;
@@ -115,15 +128,15 @@ ul.navbar a {
     font-family: "EB garamond";
     font-size: 18px;
     display: block;
-    color: #dbcac3;
+    color: #8a2942;
     padding: 15px 20px;
     text-decoration: none;
     font-size: 20;
 }
 
 ul.navbar a:hover {
-    background-color: #dbcac3;
-    color: #515c7e;
+    background-color: #8a2942;
+    color: #db97a5;
     padding: 15px 15px;
 }
 
@@ -142,8 +155,8 @@ footer {
     font-family: "Libre Baskerville", serif;
     text-align: center;
     padding: 1em;
-    background-color: #515c7e;
-    color: #dbcac3;
+    background-color: #db97a5;
+    color: #b93555;
     margin-top: auto; 
 }
 
@@ -152,25 +165,71 @@ footer {
 <body>
     <header> 
         <ul class="navbar">
-            <li><a href="2Q1GRomance.html">romance</a></li>
+            <li><a href="2Q1GPotassiumCrisologo.html">home</a></li>
             <li><a href="2Q1GShounen.html">shounen</a></li>
             <li><a href="2Q1GMovies.html">movies</a></li>
         </ul>
 
-        <h1> ★'s anime tracker .ᐟ</h1>
+        <h1> romance animes .ᐟ</h1>
     </header>
 
 <div class="stuff">
     <section class="intro">
-        <h2>intro ᯓ★</h2>
-        <p>Hello! Welcome to my anime movies/series tracker. 
-        I'll be writing down my favorite anime for the genres: romance, shounen, and anime movies in general! 
-        I'll also be including my ratings, reviews, and favorite things about each anime.
-        <br>This is Wartortle. Wartortle also likes anime. He also matches the color scheme. →</p>
+        <table>
+      <tr>
+        <th> Title </th>
+        <th> Synopsis </th>
+        <th> Review </th>
+        <th> Rating </th>
+
+      </tr>
+      <tr> 
+        <td> 7:30 - 9:00 AM </td>
+</td>
+      </tr>
+      <tr>
+        <td> 9:10 - 9:55 AM </td>
+
+      </tr>
+      <tr>
+        <td> 9:55 - 10:40 AM </td>
+        <td> STUDY PERIOD </td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td> 10:40 - 11:25 AM </td>
+
+      </tr>
+      <tr>
+        <td> 11:25 - 12:10 PM </td>
+        <td> </td>
+      </tr>
+
+      <tr>
+        <td> 12:10 - 1:05 PM </td>
+        <td> LUNCH </td>
+      </tr>
+      <tr>
+        <td>1:05 - 2:35 PM</td>
+
+      </tr>
+      <tr>
+        <td> 2:35 - 3:30 PM </td>
+        <td> STUDY PERIOD </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>3:30 - 4:15 PM</td>
+
+      </tr>
+      <tr>
+        <td> </td>
+      </tr>
+    </table>
     </section>
 
-    <div class="wartortle">
-        <img src="./2Q1Gimg/wartortle.gif" alt="Wartortle">
+    <div class="milotic">
+        <img src="milotic.gif" alt="milotic">
     </div>
 </div>
 
