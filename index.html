@@ -6,7 +6,7 @@
 
     <link rel="icon" href="favicon.png">
     
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="./public/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -14,195 +14,183 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Tala Crisologo">
-
-
 </head>
-    <style>
-        body {
-            background-color: #bed2ba;
-            color: #1f311b;
-            text-align: center;
-            margin: 0;
 
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
+<style>
+body {
+    background-color: #dad19b;
+    color: #1f311b;
+    text-align: center;
+    margin: 0;
+    font-family: "EB Garamond", serif;           
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
-        header {
-            background-color: #bed2ba;
-            color: #1f311b;
-            padding: 2em;
-            text-align: left;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+header {
+    background-image: url('./assets/arriety.png');
+    color: #dad19b;
+    height: 200px;
+}
 
-        #emma {
-            width: 125px;
-            height: 125px;
-        }
-        #cmiygl {
-            width: 300px;
-            height: 200px;
-            padding-left:0;
-        }
-        #tyler {
-            width: 150px;
-            height: 150px;
-            padding-left:0;
-            padding-top: 10;
-        }
-        #am{
-            font-family: "Libre Baskerville", serif;           
-            font-weight: 400;
-            font-size: 15px;
-            padding: 3%;
-            margin: 0;
-            color: #6a7a5a;
-        }
-        #mfavs{
-            font-family: "Jua", sans-serif;           
-            font-weight: 400;
-            font-size: 15px;
-            padding: 1%;
-            margin: 0;
-            color: #dad19b;
-            text-align: center;
-        }
-        p {
-            font-family: "Jua", sans-serif;
-            font-weight: 400;
-            text-align: left;
-            margin: 1px 0 0 0;
-        }
+#cmiygl {
+    width: 300px;
+    height: 200px;
+    padding-left:0;
+}
 
-        .stuff {
-            display: flex;
-            align-items: flex-start;
-            gap: 20px; 
-            margin: 30px 3em; 
-        }
+#tyler {
+    width: 150px;
+    height: 150px;
+    padding-left:0;
+    padding-top: 10;
+}
 
-        .submissions {
-            background-color: #6a7a5a;
-            width: 250px;
-            padding-bottom: 1em;
-            border-radius: 10px;
-            text-align: left;
-        }
+#bulb{
+    width: 125px;
+    height: auto;
+}
 
-        .abtme {
-            background-color: #dad19b;
-            flex: 1; 
-            padding-bottom: 1em;
-            border-radius: 10px;
-            text-align: left;
-        }
+#am{
+    font-family: "Libre Baskerville", serif;           
+    font-weight: 400;
+    font-size: 15px;
+    padding-bottom: 0%;
+    padding-left: 3%;
+    color: #6a7a5a;
+}
 
-        .media {
-            background-color: #6a7a5a;
-            width: 250px;
-            padding-bottom: 1em;
-            border-radius: 10px;
-            text-align: left;
-        }
-        .media audio {
-            width: 90%;   
-            margin: 10px auto;
-            display: block;
-        }
+#mfavs{
+    font-size: 15px;
+    padding: 1%;
+    margin: 0;
+    color: #dad19b;
+    text-align: center;
+}
 
-        .about {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            padding: 0 3%;
-        }
+p {
+    margin: 1px 0 0 0;
+}
 
-        .about p {
-            text-align: left;
-            font-family: "Jua", sans-serif;
-            font-weight: 400;
-            margin: 0;
-        }
+.stuff {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px; 
+    margin: 30px 3em; 
+}
 
-        .center {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 50%;
-            }
-        h1 {
-            font-family: "Libre Baskerville", serif;
-            font-weight: 700;
-            margin: 0;
-        }
+.submissions {
+    background-color: #6a7a5a;
+    width: 250px;
+    padding-bottom: 1em;
+    border-radius: 10px;
+    text-align: left;
+}
 
-        h2 {
-            font-family: "Libre Baskerville", serif;           
-            font-weight: 400;
-            font-size: 15px;
-            padding: 3%;
-            margin: 0;
-            color: #dad19b;
-        }
+.abtme {
+    background-color: #dad19b;
+    flex: 1; 
+    padding-bottom: 1em;
+    border-radius: 10px;
+    text-align: left;
+}
 
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
+.media {
+    background-color: #6a7a5a;
+    width: 250px;
+    padding-bottom: 1em;
+    border-radius: 10px;
+    text-align: left;
+}
 
-        a {
-            font-family: "Jua", sans-serif;
-            font-weight: 400;
-            display: block;
-            color: #dad19b;
-            padding: 15px 15px;
-            text-decoration: none;
-            font-size: 15px;
-        }
+.media audio {
+    width: 90%;   
+    margin: 10px auto;
+    display: block;
+}
 
-        a:hover {
-            background-color: #dad19b;
-            color: #6a7a5a;
-            transition: 0.2s ease;
-        }
-        footer {
-            text-align: center;
-            padding: 1em;
-            background-color: #8daf9b;
-            color: #1f311b;
-            margin-top: auto;
-        }
+.about {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 3%;
+}
 
+.about p {
+    text-align: left;
+    font-family: "EB Garamond", sans-serif;
+    font-weight: 400;
+    margin: 0;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+h1 {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 700;
+    margin: 0;
+}
+
+h2 {
+    font-family: "Libre Baskerville", serif;           
+    font-weight: 400;
+    font-size: 15px;
+    padding: 3%;
+    margin: 0;
+    color: #dad19b;
+}
+
+ul.navbar {
+    background-color: #6a7a5a;
+}
+
+ul.navbar a {
+    font-family: "EB garamond";
+    color: #dad19b;
+}
+
+ul.navbar a:hover {
+    background-color: #dad19b;
+    color: #6a7a5a;
+}
+
+footer {
+    background-color: #6a7a5a;
+    color: #dad19b;
+}
+
+.social-list a {
+    color:#dad19b;
+}
     </style>
 
 <body>
     <header>
+        <ul class="navbar">
+            <li><a href="./public/2Q1GPotassiumCrisologo.html">2Q1G</a></li>
+        </ul>
         <div>
             <h1>TALA'S PORTFOLIO</h1>
             <p>K08 | Potassium 2029 | CS3 Q2 // all pages best viewed full screen on PC</p>
         </div>
-        <img id="emma" src="./assets/emma.png" alt="Emma from Veil">
+        <img id="bulb" src="./assets/bulbasaur.gif" alt="bulbasaur">
     </header>
     
     <div class="stuff">
-        <section class="submissions">
-            <h2>links to submissions ᯓ★</h2>
-            <ul>
-                <li><a href="./public/2Q1GPotassiumCrisologo.html">2Q1G Exercise</a></li>
-            </ul>
-        </section>
+        <img id="cmiygl" src="./assets/cmiygl.png" alt="me">
 
-        <section class="abtme">
+<section class="abtme">
     <h2 id="am">about me .ᐟ</h2>
 
     <div class="about">
-        <img id="cmiygl" src="./assets/cmiygl.png" alt="me">
-        <p id="p1">
+        <p>
             Hello! I'm Tala and this is my portfolio for different classworks in CS3 Q2. 
             I decided to lock into my portfolio design because I kept forgetting to make my previous one pretty.
             I love music (usually rap/pop/opm/musicals), frisbee & hiking, chem, and the color blue (I don't know why my portfolio color scheme is green). 
@@ -211,7 +199,6 @@
         </p>
     </div>
 </section>
-
 
         <section class="media">
             <h2> ‎ </h2>
@@ -226,11 +213,14 @@
     </div>
 
 <footer>
-    <p>&copy; 2025 TalaCrisologo</p>
-    <ul>
-        <li><a href="./public/References.html" style="text-align: left;">References</a></li>
+    <ul class="social-list">
+        <li><a href="https://github.com/talacrisologo" target="_blank" rel="noopener noreferrer">github</a></li>
+        <li><a href="https://talacrisologo.github.io/CS3_2ndQtrPortfolio/" target="_blank" rel="noopener noreferrer">github pages</a></li>
+        <li><a href="References.html">references</a></li>
     </ul>
+    <p class="copyright">
+        &copy; 2025 TalaCrisologo. All rights reserved.
+    </p>
 </footer>
-
 </body>
 </html>

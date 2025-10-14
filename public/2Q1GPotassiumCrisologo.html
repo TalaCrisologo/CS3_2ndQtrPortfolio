@@ -5,7 +5,7 @@
     
     <link rel="icon" href="favicon.png">
     
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -17,7 +17,6 @@
 <style>
 
 header { 
-    font-family: Libre Baskerville;
     font-weight:400;
     background-image: url('./2Q1Gimg/sky.png');
     background-repeat: no-repeat;
@@ -30,23 +29,14 @@ header {
 }
 
 body {
+    font-family: EB garamond;
     background-color: #dbcac3;
     color: #e5dea0;
-    text-align: center;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
 }
 
 /* headings */
 h1{
     color: #dbcac3;
-    font-weight: 700;
-    font-family: Libre Baskerville;
-    font-weight:400;
-    text-align: left;
-    margin-top: 50px;
 }
 
 h2{
@@ -104,32 +94,17 @@ h2{
 
 /* navbar stuff */
 ul.navbar {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
     background-color: #515c7e;
-    display: flex;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 50px;
-    left: 0;
 }
 
 ul.navbar a {
     font-family: "EB garamond";
-    font-size: 18px;
-    display: block;
     color: #dbcac3;
-    padding: 15px 20px;
-    text-decoration: none;
-    font-size: 20;
 }
 
 ul.navbar a:hover {
     background-color: #dbcac3;
     color: #515c7e;
-    padding: 15px 15px;
 }
 
 /* stuff inside footer */
@@ -144,12 +119,11 @@ ul.ref {
 }
 
 footer {
-    font-family: "Libre Baskerville", serif;
-    text-align: center;
-    padding: 1em;
     background-color: #515c7e;
     color: #dbcac3;
-    margin-top: auto; 
+}
+.social-list a {
+    color:#dbcac3;
 }
 
 </style>
@@ -157,6 +131,7 @@ footer {
 <body>
     <header> 
         <ul class="navbar">
+            <li><a href="https://talacrisologo.github.io/CS3_2ndQtrPortfolio/" target="_blank" rel="noopener noreferrer">⾕</a></li>
             <li><a href="2Q1GMovies.html">movies</a></li>
             <li><a href="2Q1GFantasy.html">fantasy</a></li>
             <li><a href="2Q1GOther.html">other</a></li>
@@ -180,10 +155,14 @@ footer {
 </div>
 
 <footer>
-    <p id="copyr">   &copy; 2025 Tala Crisologo </p>
-    <ul class="ref">
+    <ul class="social-list">
+        <li><a href="https://github.com/talacrisologo" target="_blank" rel="noopener noreferrer">github</a></li>
+        <li><a href="https://talacrisologo.github.io/CS3_2ndQtrPortfolio/" target="_blank" rel="noopener noreferrer">github pages</a></li>
         <li><a href="References.html">references</a></li>
     </ul>
+    <p class="copyright">
+        &copy; 2025 TalaCrisologo. All rights reserved.
+    </p>
 </footer>
 
 </body>
