@@ -88,6 +88,11 @@ ul.navbar a:hover {
     padding: 15px 15px;
 }
 
+a[aria-current="page"] {
+  font-weight: bold;
+}
+
+
 /* stuff in footer */
 .social-list {
     list-style: none;
