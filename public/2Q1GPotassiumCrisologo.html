@@ -19,12 +19,6 @@
 header { 
     font-weight:400;
     background-image: url('./2Q1Gimg/sky.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    text-align: left;
-    padding: 2em;
-    display: flex;
-    align-items: center;
     height: 225px;
 }
 
@@ -90,6 +84,11 @@ h2{
 .wartortle img {
     width: 200px;
     height: auto;
+    transition: transform 0.3s ease;
+}
+
+.wartortle img:hover {
+  transform: scale(1.2);
 }
 
 /* navbar stuff */
@@ -132,6 +131,7 @@ footer {
     <header> 
         <ul class="navbar">
             <li><a href="https://talacrisologo.github.io/CS3_2ndQtrPortfolio/">⾕</a></li>
+            <li><a href="2Q1GPotassiumCrisologo.html" aria-current="page">main</a>
             <li><a href="2Q1GMovies.html">movies</a></li>
             <li><a href="2Q1GFantasy.html">fantasy</a></li>
             <li><a href="2Q1GOther.html">other</a></li>
