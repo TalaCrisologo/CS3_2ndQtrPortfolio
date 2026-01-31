@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Signups</title>
+    <link rel="icon" href="favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Karla, sans-serif;
+            background-color: #FFF2EF;
+            color: #5D688A;
+            padding: 30px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 2px solid #5D688A;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #5D688A;
+            color: #FFF2EF;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Club Signups</h1>
+
+<label>Filter by Club:</label>
+<select id="cFilter" onchange="displaySignups()">
+    <option value="ALL">All Clubs</option>
+    <option value="Alianti">Alianti</option>
+    <option value="XYZ">Pisay XYZ</option>
+    <option value="Expo">Exposure</option>
+    <option value="Kislap">Kislap</option>
+    <option value="Lab">Labuyo</option>
+</select>
+
+<p id="total"></p>
+<p id="noRes" style="display:none; font-weight:bold;">
+    No signups found for this club.
+</p>
+
+
+<table>
+    <thead>
+        <tr>
+            <th>Student ID</th>
+            <th>Name</th>
+            <th>Grade</th>
+            <th>Status</th>
+            <th>Club</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody id="tBody"></tbody>
+</table>
+
+<script>
+function displaySignups() {
+    let signups = JSON.parse(localStorage.getItem("cSignup")) || [];
+
+    let selected = document.getElementById("cFilter").value;
+    let tBody = document.getElementById("tBody");
+    let noRes = document.getElementById("noRes");
+
+    tBody.innerHTML = "";
+
+    for (let i = 0; i < signups.length; i++) {
+        let signup = signups[i];
+
+        if (selected === "ALL" || signup.club === selected) {
+            tBody.innerHTML += `
+                <tr>
+                    <td>${signup.studentID}</td>
+                    <td>${signup.name}</td>
+                    <td>${signup.grade}</td>
+                    <td>${signup.status}</td>
+                    <td>${signup.club}</td>
+                    <td>${signup.email}</td>
+                </tr>
+            `;
+        }
+    }
+
+    let amt = tBody.rows.length;
+
+    document.getElementById("total").innerText =
+        "Total Signups: " + amt;
+
+    if (amt === 0) {
+        noRes.style.display = "block";
+    } 
+    
+    else {
+        noRes.style.display = "none";
+    }
+}
+
+displaySignups();
+
+</script>
+
+</body>
+</html>

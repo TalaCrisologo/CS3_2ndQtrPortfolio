@@ -10,11 +10,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
         
     <style>
-
         input:focus,
         textarea:focus,
         select:focus {
-            outline: none; 
+            outline: none;
             border: 2px solid #5D688A;
             box-shadow: 0 0 6px rgba(74, 144, 226, 0.5);
         }
@@ -22,52 +21,57 @@
         .invalid {
             border: 3px solid #FD7979;
         }
+
         .valid {
             border: 3px solid #3A6F43;
         }
-
         body {
             font-family: "Karla", sans-serif;
             line-height: 1.6;
-            text-align: left;
             margin: 0;
             padding: 30px;
+            min-height: 100vh;
+
             display: flex;
             flex-direction: column;
-            min-height: 100vh;
+
             background-color: #FFF2EF;
             color: #5D688A;
+            text-align: left;
         }
 
         fieldset {
-            border-radius: 12px;
-            border: 3px solid #5D688A;
-            padding: 20px;
             margin: 20px 0;
-        }
+            padding: 20px;
 
-        input[type="submit"],
-        input[type="reset"] {
-            padding: 12px 28px;
-            font-size: 16px;
-            border-radius: 8px;
-            border: none;
-            cursor: pointer;
-        }
-
-            input[type="submit"] {
-            background-color: #5D688A;
-            color: #FFF2EF;
-        }
-
-        input[type="reset"] {
-            background-color: #5D688A;
-            color: #FFF2EF;
+            border: 3px solid #5D688A;
+            border-radius: 12px;
         }
 
         input[type="submit"],
         input[type="reset"] {
             margin: 10px;
+            padding: 12px 28px;
+
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+
+            background-color: #5D688A;
+            color: #FFF2EF;
+        }
+        button {
+            margin: 10px;
+            padding: 12px 28px;
+
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+
+            background-color: #5D688A;
+            color: #FFF2EF;
         }
     </style>
 </head>
@@ -76,22 +80,27 @@
 <h1> ★'s Club Form!</h1>
 <h2> Please enter all necessary information. Click submit when finished!</h2>
 
-<form action="submit" method="post" onsubmit="return sForm()" onreset="return rForm()">
+<form method="post" onsubmit="return sForm()" onreset="return rForm()">
 <fieldset>
 
     <label for="StudentID">Student ID:</label>
-    <input type="number" id="StudentID" name="StudentID" onblur="check(this)"><br><br>
+    <input type="number" id="StudentID" onblur="check(this)"><br><br>
+
     <label for="fname">Full Name: </label>
-    <input type="text" id="fname" name="fname" onblur="check(this)"><br><br>
+    <input type="text" id="fname" onblur="check(this)"><br><br>
+
     <label for="bday">Birthday:</label>
-    <input type="date" id="bday" name="bday" onblur="check(this)"><br><br>
+    <input type="date" id="bday" onblur="check(this)"><br><br>
+
     <label for="mail">Email Address:</label>
-    <input type="email" id="mail" name="mail" onblur="check(this)"><br><br>
+    <input type="email" id="mail" onblur="check(this)"><br><br>
+
 </fieldset>
 <fieldset>
 
     <label for="phone">Mobile Phone:</label>
-    <input type="text" id="phone" name="phone" onblur="check(this)"><br><br>
+    <input type="text" id="phone" onblur="check(this)"><br><br>
+
     <label for="year">Grade Level:</label>
     <select name="year" id="year">
         <option value="7">Grade 7</option>
@@ -123,11 +132,44 @@
 </fieldset>
     <input type="submit" value="Submit">
     <input type="reset" value="Reset">
+    <button type="button" onclick="viewSignups()">View Signups</button>
 </form>
 
 <script>
 function sForm() {
-    return confirm("Do you want to submit this form?");
+
+    let invalids = document.querySelectorAll(".invalid");
+    if (invalids.length > 0) {
+        alert("Please fill out all required fields.");
+        return false;
+    }
+  
+    if (!confirm("Do you want to submit this form?")) return false;
+
+    let signups = JSON.parse(localStorage.getItem("cSignup")) || [];
+    let status = document.querySelector('input[name="status"]:checked');
+
+    let signup = {
+        studentID: document.getElementById("StudentID").value,
+        name: document.getElementById("fname").value,
+        birthday: document.getElementById("bday").value,
+        email: document.getElementById("mail").value,
+        phone: document.getElementById("phone").value,
+        grade: document.getElementById("year").value,
+        status: status ? status.value : "",
+        club: document.getElementById("club").value,
+        message: document.getElementById("message").value,
+    };
+
+    signups.push(signup);
+    localStorage.setItem("cSignup", JSON.stringify(signups));
+
+    alert("Signup saved!");
+    return false;
+}
+
+function viewSignups() {
+    window.location.href = "viewSignUps.html";
 }
 
 function rForm() {
